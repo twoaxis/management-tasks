@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ar">
+    <head>
+        <link rel="stylesheet" href="/src/css/auth.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>SignIn</title>
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    </head>
+    <body>
+        <div id="timeout">session timeout! login again</div>
+        <!-- <div id="logo-container">
+            <img src="/src/img/uni_logo.png" alt="University Logo" class="logo-left">
+            <img src="/src/img/fci_logo.png" alt="Faculty Logo" class="logo-right">
+        </div> -->
+        <div class="container" id="container">
+            <div class="auth">
+                <div id="error-message" class="error-message"></div>
+                <form id="signinForm" action="enterPassword.html" method="GET">
+                    <h1>صفحه تسجيل الدخول</h1><br>
+                    <input type="email" placeholder="البريد الالكتروني" name="email" required>
+                    <!-- <a href="forgetPass.html" class="forgot-password">نسيت كلمه المرور؟</a><br> -->
+                    <button type="submit" class="signin-btn">التالي</button>
+                </form>
+            </div>
+        </div>
+        <script src="js/login.js"></script>
+    </body>
+</html>
