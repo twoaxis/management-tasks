@@ -4,26 +4,30 @@
         <link rel="stylesheet" href="/css/auth.css">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>SignIn</title>
+        <title>Sign In</title>
         <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     </head>
     <body>
-        <div id="timeout">session timeout! login again</div>
-        <!-- <div id="logo-container">
-            <img src="/img/uni_logo.png" alt="University Logo" class="logo-left">
-            <img src="/img/fci_logo.png" alt="Faculty Logo" class="logo-right">
-        </div> -->
-        <div class="container" id="container">
-            <div class="auth">
-                <div id="error-message" class="error-message"></div>
-                <form id="signinForm" action="enterPassword.html" method="GET">
-                    <h1>صفحه تسجيل الدخول</h1><br>
-                    <input type="email" placeholder="البريد الالكتروني" name="email" required>
-                    <!-- <a href="forgetPass.html" class="forgot-password">نسيت كلمه المرور؟</a><br> -->
-                    <button type="submit" class="signin-btn">التالي</button>
-                </form>
+        <form>
+            <div id="slides">
+                <div class="slide">
+                    <h1>تسجيل الدخول لـ FCI Tanta</h1>
+                    <div class="field">
+                        <label for="email">البريد الإلكتروني:</label>
+                        <input id="email" type="email" placeholder="aida.nasr@ics.tanta.edu.eg" name="email">
+                    </div>
+                    <button type="button" id="email-btn">التالي</button>
+                </div>
+                <div class="slide">
+                    <h1>تسجيل الدخول لـ FCI Tanta</h1>
+                    <div class="field">
+                        <label for="password">كلمة المرور:</label>
+                        <input id="password" type="password" placeholder="••••••••••••" name="password">
+                    </div>
+                    <button type="submit">دخول</button>
+                </div>
             </div>
-        </div>
-        <script src="js/login.js"></script>
+        </form>
+        <script src="/js/login.js"></script>
     </body>
 </html>
