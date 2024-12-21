@@ -1,5 +1,6 @@
+@import "master.css";
+
 body {
-    margin: 0;
     font-family: 'Inter', sans-serif;
     direction: rtl;
     background-color: #f9f9f9;
