@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel</title>
+    <link rel="stylesheet" href="/css/adminPanel.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="admin-panel">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="logo">
+                <h2>لوحة الإدارة</h2>
+            </div>
+            <nav>
+                <ul>
+                    <li><i class="fas fa-dashboard"></i> لوحة التحكم</li>
+                    <li><a href="/adminusers.html"><i class="fas fa-users"></i> إدارة المستخدمين</a></li>
+                    <li><i class="fas fa-chart-line"></i> التقارير</li>
+                    <li><i class="fas fa-cogs"></i> الإعدادات</li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="header">
+                <h1>مرحبًا بك في لوحة الإدارة</h1>
+                <div class="profile">
+                    <img src="profile.jpg" alt="Admin" class="profile-img">
+                    <span>المسؤول</span>
+                </div>
+            </header>
+
+            <!-- Dashboard Section -->
+            <section class="dashboard">
+                <div class="card">
+                    <h3>إجمالي المستخدمين</h3>
+                    <p>120</p>
+                </div>
+                <div class="card">
+                    <h3>المهام النشطة</h3>
+                    <p>75</p>
+                </div>
+            </section>
+
+            <!-- User Management Section -->
+            <section class="user-management">
+                <h2>إدارة المستخدمين</h2>
+                <div class="user-actions">
+                    <button id="addUserBtn"><i class="fas fa-user-plus"></i> إضافة مستخدم</button>
+                    <input type="text" id="searchBar" placeholder="بحث عن المستخدمين...">
+                </div>
+                <div class="user-form" id="userFormContainer" style="display: none;">
+                    <h3>إضافة مستخدم</h3>
+                    <form id="userForm">
+                        <label for="username">اسم المستخدم:</label>
+                        <input type="text" id="username" name="username" required>
+                        <label for="email">البريد الإلكتروني:</label>
+                        <input type="email" id="email" name="email" required>
+                        <label for="password">كلمة المرور:</label>
+                        <input type="password" id="password" name="password" required>
+                        <label for="role">الدور:</label>
+                        <select id="role" name="role" required>
+                            <option value="admin">admin</option>
+                            <option value="manager">moderator</option>
+                            <option value="user">prof</option>
+                            <option value="user">eng</option>
+                            <option value="user">user</option>
+                        </select><br>
+                        <button type="submit" style="align-content: center; align-self: center">إضافة مستخدم</button>
+                    </form>
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>الاسم</th>
+                            <th>البريد الإلكتروني</th>
+                            <th>الدور</th>
+                            <th>الإجراءات</th>
+                        </tr>
+                    </thead>
+                    <tbody id="userList">
+                        <tr>
+                            <td>mohamed</td>
+                            <td>mohamed@gmail.com</td>
+                            <td>مستخدم</td>
+                            <td>
+                                <button class="edit">تعديل</button>
+                                <button class="delete">حذف</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Ahmed</td>
+                            <td>ahmed@gmail.com</td>
+                            <td>مدير</td>
+                            <td>
+                                <button class="edit">تعديل</button>
+                                <button class="delete">حذف</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Ahmed</td>
+                            <td>ahmed@gmail.com</td>
+                            <td>مدير</td>
+                            <td>
+                                <button class="edit">تعديل</button>
+                                <button class="delete">حذف</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </main>
+    </div>
+    <script src="/js/adminPanel.js"></script>
+</body>
+</html>
